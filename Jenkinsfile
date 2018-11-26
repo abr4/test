@@ -11,10 +11,7 @@ pipeline {
     }
     stage('Time') {
       steps {
-        timestamps() {
-          timestamps()
-        }
-
+        git(url: 'https://github.com/abr4/test', branch: 'feature', changelog: true)
       }
     }
     stage('File list') {
