@@ -16,7 +16,7 @@ pipeline {
     }
     stage('File list') {
       steps {
-        bat(returnStatus: true, returnStdout: true, encoding: 'ASCII', script: 'abr4.bat')
+        bat(returnStatus: true, returnStdout: true, encoding: 'ASCII', script: 'listfiles.bat')
       }
     }
     stage('Test Finish') {
