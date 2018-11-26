@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Test Finish') {
       steps {
-        sh 'echo "DONE"'
+        mail(subject: 'Build Finish', body: 'Build Finish for Test devops.local', to: 'abr4@3ds.com', from: 'abr4@3ds.com')
       }
     }
   }
