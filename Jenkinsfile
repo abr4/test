@@ -22,7 +22,8 @@ pipeline {
     }
     stage('Test Finish') {
       steps {
-        mail(subject: 'Build Finish', body: 'Build Finish for Test devops.local', to: 'abr4@3ds.com', from: 'abr4@3ds.com')
+        //mail(subject: 'Build Finish', body: 'Build Finish for Test devops.local', to: 'abr4@3ds.com', from: 'abr4@3ds.com')
+        echo "%PATH%"
       }
     }
   }
