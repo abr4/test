@@ -15,17 +15,22 @@ pipeline {
       }
     }
     stage('File list') {
-      steps {
-        //bat(returnStatus: true, returnStdout: true, encoding: 'ASCII', script: 'listfiles.bat')
-        bat "listfiles.bat"
+      parallel {
+        stage('File list') {
+          steps {
+            bat 'listfiles.bat'
+          }
+        }
+        stage('Linux Script') {
+          steps {
+            sh 'sh welcome.sh'
+          }
+        }
       }
     }
     stage('Test Finish') {
       steps {
-       bat 'echo %PATH%'
-        //mail(subject: 'Build Finish', body: 'Build Finish for Test devops.local', to: 'abr4@3ds.com', from: 'abr4@3ds.com')
-        
-        //bat "listfiles.bat"
+        bat 'echo %PATH%'
       }
     }
   }
