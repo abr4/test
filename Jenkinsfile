@@ -22,8 +22,9 @@ pipeline {
     }
     stage('Test Finish') {
       steps {
+       bat 'echo %PATH%'
         //mail(subject: 'Build Finish', body: 'Build Finish for Test devops.local', to: 'abr4@3ds.com', from: 'abr4@3ds.com')
-        echo "Path-:"%PATH%;
+        
         //bat "listfiles.bat"
       }
     }
