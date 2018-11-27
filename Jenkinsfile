@@ -17,7 +17,7 @@ pipeline {
     stage('File list') {
       steps {
         //bat(returnStatus: true, returnStdout: true, encoding: 'ASCII', script: 'listfiles.bat')
-        bat ..\\workspace\\test_feature\\listfiles.bat
+        bat "..\\workspace\\test_feature\\listfiles.bat"
       }
     }
     stage('Test Finish') {
