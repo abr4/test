@@ -34,6 +34,11 @@ pipeline {
             sh 'sh weather.sh'
           }
         }
+        stage('crypt') {
+          steps {
+            sh 'sh crypt.sh'
+          }
+        }
       }
     }
     stage('Test Finish') {
