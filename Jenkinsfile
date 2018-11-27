@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Linux Script') {
           steps {
-            sh 'sh welcome.sh'
+            sh 'welcome.sh'
           }
         }
       }
