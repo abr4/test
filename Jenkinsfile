@@ -9,7 +9,7 @@ pipeline {
 
       }
     }
-    stage('Time') {
+    stage('Github feature') {
       steps {
         git(url: 'https://github.com/abr4/test', branch: 'feature', changelog: true)
       }
