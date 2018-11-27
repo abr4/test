@@ -17,7 +17,7 @@ pipeline {
     stage('File list') {
       steps {
         //bat(returnStatus: true, returnStdout: true, encoding: 'ASCII', script: 'listfiles.bat')
-        bat "istfiles.bat"
+        bat "listfiles.bat"
       }
     }
     stage('Test Finish') {
