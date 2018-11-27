@@ -25,8 +25,8 @@ pipeline {
           steps {
             echo 'Shell Execution Begin'
             sh '''echo "Execution START at $(date)"
-sh welcome.sh
-echo "Execution END at $(date)"'''
+            sh welcome.sh
+            echo "Execution END at $(date)"'''
           }
         }
         stage('Cli') {
