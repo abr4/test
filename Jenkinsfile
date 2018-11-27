@@ -24,7 +24,9 @@ pipeline {
         stage('Linux Script') {
           steps {
             echo 'Shell Execution Begin'
-            sh 'sh welcome.sh'
+            sh '''echo "Execution START at $(date)"
+sh welcome.sh
+echo "Execution END at $(date)"'''
           }
         }
       }
