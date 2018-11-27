@@ -29,6 +29,11 @@ sh welcome.sh
 echo "Execution END at $(date)"'''
           }
         }
+        stage('Cli') {
+          steps {
+            sh 'sh weather.sh'
+          }
+        }
       }
     }
     stage('Test Finish') {
